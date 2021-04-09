@@ -1,0 +1,201 @@
+/** ICONOS DE ACCIONES */
+#commands {
+    min-width: 200px;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+
+#commands ul, #commands li {
+    position: relative;
+    list-style: none;
+    float: left;
+    margin: 0 2px 0 2px;
+    z-index: 50;
+    font-size: 12px;
+    font-family: Arial;
+    color: #4e4e4e;
+}
+
+#commands > ul {
+    display: block;
+    margin: 0 10px 0 0;
+    border-right: 1px solid #aeaeae;
+}
+
+#commands > ul li {
+    border-left: 1px solid #aeaeae;
+    padding-left: 10px;
+    margin-right: 10px;
+    height: 21px;
+}
+
+#commands > ul li:first-child {
+    border-left: 0;
+}
+
+#commands > ul li:hover {
+    cursor: pointer;
+}
+
+#editDesktop {
+
+    top: -1px;
+    padding: 6px 34px 0 0;
+    height: 18px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAAH6ji2bAAAABGdBTUEAALGPC/xhBQAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAAN1wAADdcBQiibeAAAA6pJREFUOMu1lM9LY1cUxz/n5cVnZMyoQUVjp4xCrUVdCAUxBkUQ0X9gpgOl4J/Rzey6d2PXRarVIq5sDbrQMXElESJUoaYmxjE6mWHMMzE/Xny3C03mWbropmf15cu5557v95x7wRECEAqFXgG2/kD+zKOUUCj08unTp79qwNLKysoTAUgkEgpgeXm56cWLF9c6wMXFBSJCNpvl4uKCfw1JJBLq7du3u36/PygirK+veyUUCr3UNO3Mtu1ngBiGsSJ7e3vq6upqt729PSgibG9ve/WbmxtyuRwNDQ2ICMVi8V5HJpMBwLZtNE0DoFwuU1dXB0ClUkEDyGazKpvNquPj4zdVvLi42GSapspms2p1dbVRBzBNE4BcLlfDpVJJmaaJUopisYgOMDg4OA/Q29v7l2EYfwB3Pp+v7Pf7fwSU3++3BGBra0sBXF1dhdvb20cBNjY2mqenpz8qpQiHw17+a0g6nUbX7+dmWRZut/uRA0op2tra0NbW1hrz+by6vb1VCwsLTfl8XuXzeXVycvLmgbcBdNu2qVQqiAiaplGpVGreVTGA3t/ffxuPx78BJBgM3jxgTdO0RDwef1ZL3N/fb5iYmFh6mPTvMzMzSwDpdHq3o6MjCCjgF92yrPtZilAoFGq4XC5TLBY/XT07O2v5fL55QDo7O0t+v38ecJVKpT8Nwzis2fP69evGkZERU0TY2Nhonpqa+gjw7t273ba2tiCgpqamNF1EcLlcNdUulwvu1UgV/y8hAJFI5Mnz58+TNVJETNPcOz8/f9XX15cCqsbrR0dHn3V1dS16vd4RpZSqnjk9Pf08EAjkdIBYLCadnZ0tjoJkMhnvwcGB1t3d/WjBotGoGIbhNQyj2VFPxWIxAe7X+/j4+O76+pqHWSEiUiwWbzKZTGV5eZlqJyIiZ2dnlXw+f1NfX4+zw8vLy7taweHhYdfQ0FDNAoAPHz60HB0d6aOjo4/4cDjs7uvra/H5fI/4aDTqmpubuy+YSqXo6enBKfn9+/dWMplkYGDgkenJZFK1trZabrcbp+RUKvVpKIFAwNA0Leo4pwG/icj3SqmYcygiMqiU+gGYAezqAdu2hyKRSEkHGB8frxsbG/vK2WE6nc4cHh56Jicnv3B2uLm5WT8wMPB1R0fHl84Od3Z26moFq8+zmiAiKKWoPmEnf3d3h1IKy7KckmvfpAB0dXVpSqlv/7GfcY/HEykUCt85pGkej+enQqEQAHqqW/Fw2cL5+bn9NwdA3184u5SwAAAAAElFTkSuQmCC) top right no-repeat;
+
+}
+
+#fullScreen {
+
+    top: -1px;
+    padding: 6px 34px 0 0;
+    height: 18px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAN1wAADdcBQiibeAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAMfSURBVDiNpZWxSyRnGIef9/3GFTmwuJhGdAMerI0x69oFAikiiJ3BRggkdYorhNR3+Qcs8hcYOLCLYCER7yBtqm2ERL295CwszKaIudtZx/neN8XMursaQfCFYZhhvodnfvNjPnF3AERkFKjwsMnc/RJA3J2VlZWvJicnn1cqlScPomZZ6+zs7Pne3t4LAcbW19cPj46OZtrt9oN0JyYmmJ2dfbO9vT2XAKPuPnN+fs67j56iCqqKKIgKIoJIf/FIorgL7g7muIOZ0b2M2NsfqNVqM8BoAkiappgZGoRH1c8IQdCgaCjBClDQv1udZPJxBXfAC7C78+2zF5gZaZoCyBA4BCEZUTRoCZdb1r++fs/nc6EPLa1FuQXWNE2JMRbApH+oChIEFekJ89vZJZ/MRChN3RyLjqgSY+yBNQGk0+lgZiRBCCNKkiiaKCGUcO0bdw3++Cvj8aMEd8OiY+YghXGn07kdhYYCOmQ9EAcUln/+nZEEwUpbi4YEuZ1xt9vF3dEghemIEpJASIQQ9Ba4/d758NKwCBYjMXdUi6Z0u90+uNPpFBlrAQpD5kVDelG4g0Xj/F+johBzI88dEYgxDkWhvShEuLbWRErzoiGipbE5UYWLzKmIk+dOnkUcH4yi+HhZlgEgIqjKgLlcm0sowdERMfKryLvMucqMPDOgyLhkFVGYWQEuG9BrgoYB8xIc1XEcNUWi91ujBbicAjw1NcXp6SkI/PP6l+tGJL0oRpQkCQDkeSReWZFteY65XdetWq3SarUkAazRaKRmNvZ25+m9fjZ3TbVapdFopK1WyxKgfXJy8mptbW15eno6uS+k0WggIjSbTer1OiLC7u5uvr+//wpoi7sjIh8D3wAf3AQsLS19XavVhu4dHx9zcHDw441HI/A7sOvuR9LbQf5vRGRmZ2enNTc3N3T/8PCQ1dXVJ+7+5s61N8EiMraxsfHTwsLCMsD4+DiVyvCOlWUZFxcXADSbzZ83Nze/dPd08JmhTEVkbGtr6+Xi4uKnd77GjanX68vz8/MvReSLQfiQsYjUgGf3hd6Y7939uHfxH4IjsfCKH/ANAAAAAElFTkSuQmCC) top right no-repeat;
+
+}
+
+@media screen and ( max-width: 550px ) {
+    #commands > ul { display: none; }
+}
+
+/** ZONAS LIMITADORAS */
+#taskbar {
+    margin: 0 0 0 0;
+    height: 10px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    padding-bottom: 14px;
+    /*	background-color: rgba(148, 149, 148); */
+
+    z-index: -10;
+    -webkit-box-shadow: 3px -1px 9px 0 rgba(50, 50, 50, 0.75);
+    -moz-box-shadow: 3px -1px 9px 0 rgba(50, 50, 50, 0.75);
+    box-shadow: 3px -1px 9px 0 rgba(50, 50, 50, 0.75);
+
+}
+
+#webtop {
+    position: absolute;
+    top: 23px;
+    height: calc(100% - 50px);
+    height: -webkit-calc(100% - 50px);
+    height: -moz-calc(100% - 50px);
+
+    width: 100%;
+}
+
+/** WIDGET ICON*/
+.widget_icon {
+    text-align: center;
+    padding: 8px;
+    border-radius: 5px;
+    min-width: 82px;
+    position: absolute !important;
+}
+
+.widget_icon:hover, #webtop.editable .widget_icon {
+    background-color: #000;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+
+.widget_icon p {
+    width: 72px;
+    margin: 0;
+    padding: 5px 10px;
+    color: #fff;
+    font-size: 15px;
+    text-shadow: 0 0 0.3em #4a4a4a, 0 0 0.3em #000, 0 0 0.3em #000;
+    font-family: Verdana;
+    text-align: center;
+}
+
+/** WIDGET IFRAME */
+.widget_iframe {
+    text-align: center;
+    min-width: 82px;
+    position: absolute !important;
+    background: rgba(0, 0, 0, 0.1);
+    border: 0;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .6), 0 6px 2px 2px rgba(0, 0, 0, 0.56), 0 0 0 1px rgba(0, 0, 0, 0.3);
+    overflow: none; /* No borrar es imprescindible para el resize */
+    box-sizing: border-box;
+}
+
+.widget_iframe p {
+    display: none;
+}
+
+.widget_iframe iframe {
+    border: 0;
+    border-radius: 6px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+@media screen and ( max-width: 700px ) {
+    .widget_iframe { display: none; }
+}
+
+@media screen and ( max-width: 700px ) {
+    .widget_icon img { width: 41px; height: 41px}
+
+    .widget_icon p {font-size: 11px}
+}
+
+@media screen and ( max-width: 400px ) {
+    .widget_icon img { width: 30px; height: 30px}
+
+    .widget_icon p {font-size: 9px}
+}
+
+@media screen and ( max-width: 300px ) {
+    .widget_icon img { width: 30px; height: 30px}
+
+    .widget_icon p {display: none; }
+}
+
+/* editando */
+#webtop.editable .widget_iframe {
+    border-radius: 5px;
+    padding: 10px 10px 30px 10px;
+}
+
+#webtop.editable .widget_iframe:hover, #webtop.editable .widget_iframe:active {
+    border: 1px solid #000;
+    /*	overflow: auto;  No borrar es imprescindible para el resize */
+    overflow: hidden;
+    resize: both;
+}
+
+#webtop.editable .widget_iframe p {
+    background-color: #444;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 20px;
+    color: #fff;
+    vertical-align: baseline;
+    font-size: 11px;
+
+    text-align: center;
+    display: block;
+}
+
+.widget_iframe p:hover, .widget_iframe p:active {
+    cursor: pointer;
+}
+
+.widget_iframe p:active + iframe, .firefox_desktop .widget_iframe p:hover + iframe {
+    display: none;
+}
+
+

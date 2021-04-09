@@ -1,0 +1,244 @@
+#konqueror-menu {
+    position: relative;
+}
+
+#konqueror-menu.depth_1 {
+    margin: 10px 0;
+}
+
+#konqueror-menu.depth_2 {
+    margin: 60px 0 10px 0;
+}
+
+.konqueror-breadcrumb {
+    position: absolute;
+    top: -60px;
+    display: inline-block;
+    margin-right: 5px;
+
+    font-size: 23px;
+    font-weight: 400;
+    padding: 9px 0 4px 0;
+    line-height: 1.3;
+}
+
+#konqueror-menu > li {
+    display: inline-block;
+    vertical-align: top;
+    text-decoration: none;
+    width: 150px;
+    height: 200px;
+    margin: 20px 35px;
+}
+
+/** allow icons */
+#konqueror-menu .wp-menu-image::before {
+    color: #a0a5aa;
+    transition: all .1s ease-in-out;
+}
+
+#konqueror-menu > li:hover div.wp-menu-image::before {
+    color: #b3b9c0;
+}
+
+/** from WordPress */
+#adminmenuback,
+#konqueror-menu:not(.active),
+#konqueror-menu .wp-menu-separator,
+#konqueror-menu .wp-submenu-head,
+#konqueror-menu #collapse-menu,
+#konqueror-menu #toplevel_page_my-desktop-konqueror,
+#konqueror-menu #menu-dashboard,
+#konqueror-menu > li li,
+#wpbody-content .notice, #wpbody-content .notice-warning, #wpbody-content  .updated {
+    display: none;
+}
+
+#konqueror-menu .wp-menu-image.svg,
+#konqueror-menu .wp-menu-image:empty,
+#konqueror-menu .dashicons,
+#konqueror-menu .dashicons-before::before {
+    font-size: 140px;
+    min-height: 160px;
+    text-decoration: none;
+    background-repeat: no-repeat;
+    padding: 0;
+    margin: 0;
+    filter: brightness(52.2%) contrast(5.9%);
+}
+
+/**
+  * Hide some budgets like in WP_backery icon
+ */
+#konqueror-menu .wp-menu-image img {
+    display: none;
+}
+
+#konqueror-menu li a:link, #konqueror-menu li a:hover, #konqueror-menu li a:visited, #konqueror-menu li a:active {
+    text-decoration: none;
+    border: 0;
+    outline: none;
+    box-shadow: none;
+    position: relative;
+    display: block;
+}
+
+#konqueror-menu .wp-menu-name {
+    text-align: center;
+    color: #1d1d1d;
+    font-size: 18.5px;
+    overflow: hidden;
+    min-height: 75px;
+    padding-right: 15px;
+    text-transform: capitalize;
+}
+
+#konqueror-menu > li:hover .wp-menu-name {
+    color: #a0a5aa;
+}
+
+/** counts */
+#konqueror-menu .wp-menu-name > span {
+    background-color: #ba2020;
+    color: #fff;
+    padding: 7.5px;
+    border-radius: 5px;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/**
+    Custom icons
+*/
+/** Dashboard */
+.custom-dashicons-update-core::before {
+    content: "\f342";
+}
+
+/** Posts */
+.custom-dashicons-edit::before {
+    content: "\f163";
+}
+
+.custom-dashicons-post-new::before {
+    content: "\f119";
+}
+
+.custom-dashicons-edit-tags::before {
+    content: "\f323";
+}
+
+/** Media */
+.custom-dashicons-upload::before {
+    content: "\f104";
+}
+
+.custom-dashicons-media-new::before {
+    content: "\f317";
+}
+
+/** Apparence */
+.custom-dashicons-themes::before {
+    content: "\f100";
+}
+
+.custom-dashicons-customize::before {
+    content: "\f309";
+}
+
+.custom-dashicons-widgets::before {
+    content: "\f180";
+}
+
+.custom-dashicons-nav-menus::before {
+    content: "\f333";
+}
+
+.custom-dashicons-themes-custom-background::before {
+    content: "\f128";
+}
+
+/** Plugins */
+.custom-dashicons-plugins::before {
+    content: "\f106";
+}
+
+.custom-dashicons-plugin-install::before {
+    content: "\f13a";
+}
+
+/** Users */
+.custom-dashicons-users::before {
+    content: "\f307";
+}
+
+.custom-dashicons-user-new::before {
+    content: "\f110";
+}
+
+.custom-dashicons-profile::before {
+    content: "\f336";
+}
+
+/** Settings */
+
+.custom-dashicons-options-general::before {
+    content: "\f11d";
+}
+
+.custom-dashicons-options-writing::before {
+    content: "\f464";
+}
+
+.custom-dashicons-options-reading::before {
+    content: "\f177";
+}
+
+.custom-dashicons-options-discussion::before {
+    content: "\f125";
+}
+
+.custom-dashicons-options-media::before {
+    content: "\f161";
+}
+
+.custom-dashicons-options-permalink::before {
+    content: "\f103";
+}
+
+.custom-dashicons-options-privacy::before {
+    content: "\f160";
+}
+
+/** Tools */
+
+.custom-dashicons-tools::before {
+    content: "\f308";
+}
+
+.custom-dashicons-import::before {
+    content: "\f189";
+}
+
+.custom-dashicons-export::before {
+    content: "\f188";
+}
+
+.custom-dashicons-site-health::before {
+    content: "\f487";
+}
+
+.custom-dashicons-export-personal-data::before {
+    content: "\f322";
+}
+
+.custom-dashicons-erase-personal-data::before {
+    content: "\f224";
+}
+
+/** Commons */
+.custom-dashicons-theme-editor::before, .custom-dashicons-plugin-editor::before {
+    content: "\f499";
+}

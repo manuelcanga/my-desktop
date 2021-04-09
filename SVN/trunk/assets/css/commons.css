@@ -1,0 +1,200 @@
+/**
+Basado en:
+Elegant Air KDM Theme 0.2
+Copyright (c) 2008 Max Resch <resch.max@gmail.com>
+Copyright (C) 2008 Vaxx <vaxxipooh@yahoo.se>
+Fondo de: http://delta909.deviantart.com/art/The-Wood-Experiment-149566826
+Icono de tools del tema Faenza: http://code.google.com/p/faenza-icon-theme/ / http://tiheum.deviantart.com/art/Faenza-Icons-173323228
+*/
+html {
+    /* background: url(../images/desktop/wallpaper.jpg) no-repeat center center fixed; */
+    background-image: linear-gradient(135deg, #667eea 10%, #764ba2 100%);
+
+    /* background-image: -webkit-gradient(
+        linear,
+        left top,
+        right bottom,
+        color-stop(0, #D8D9D9),
+        color-stop(1, #AAA8A8)
+    );
+    background-image: -o-linear-gradient(right bottom, #D8D9D9 0%, #AAA8A8 100%);
+    background-image: -moz-linear-gradient(right bottom, #D8D9D9 0%, #AAA8A8 100%);
+    background-image: -webkit-linear-gradient(right bottom, #D8D9D9 0%, #AAA8A8 100%);
+    background-image: -ms-linear-gradient(right bottom, #D8D9D9 0%, #AAA8A8 100%);
+    background-image: linear-gradient(to right bottom, #D8D9D9 0%, #AAA8A8 100%); */
+    height: 100%;
+
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+
+    /*  -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover; */
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Sans-serif;
+    min-height: 500px;
+    overflow: hidden;
+}
+
+
+/** Panel superior */
+#panel {
+    width: 100%;
+    height: 21px;
+    margin: 0 auto;
+    background: #dfdfdfdd;
+    padding: 1px;
+
+    -webkit-box-shadow: 3px -1px 9px 0 rgba(50, 50, 50, 0.75);
+    -moz-box-shadow: 3px -1px 9px 0 rgba(50, 50, 50, 0.75);
+    box-shadow: 3px -1px 9px 0 rgba(50, 50, 50, 0.75);
+
+    position: absolute;
+    z-index: 15 !important;
+}
+
+#panel::fullscreen {
+    padding-top: 3px;
+    height: 18px;
+}
+
+#panel strong, #panel strong a, span, label {
+    color: #4e4e4e;
+    font-family: Arial;
+    font-size: 13px;
+}
+
+
+#panel #welcome strong {
+    display: inline;
+    text-align: left;
+    float: left;
+    position: relative;
+    top: 4px;
+    margin: 0 0 0 32px;
+    font-weight: normal;
+    max-width: 200px;
+    z-index: 50;
+}
+
+#panel #welcome strong a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#commands > ul {
+    display: none;
+}
+
+@media screen and ( max-width: 700px ) {
+    #panel #welcome strong { display: none; }
+}
+
+
+/** _____ Reloj del sistema_____  */
+#panel span#clock {
+
+
+    left: 0;
+    position: fixed;
+    top: 5px;
+    margin: 0 auto;
+    font-size: 12px;
+    color: #4e4e4e;
+    font-family: Arial;
+    text-align: center;
+    width: 100%;
+    height: 18px;
+}
+
+@media screen and ( max-width: 1100px ) {
+    #panel span#clock { display: none; }
+}
+
+
+/** _____ Acciones de usuarios _____  */
+#panel div#user {
+
+    position: relative;
+    float: right;
+    right: 0;
+    top: 0;
+    height: 25px;
+    margin: 0 2px 0 0;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/gD+AP7rGNSCAAAACXBIWXMAAA3WAAAN1gGQb3mcAAAACXZwQWcAAAAYAAAAGAB4TKWmAAACRElEQVRIx9VVP2gTURj/ffHdXcCEloZACFZ0yOSiSDmEeAYySArupWQUhAzhhjgXMjhndHHOKBGzd5AEopPVC1SJQW2WSEqvPa59TfM55FpCzF1jOvWDt9z77vfnfe/7HnDdg+ZJYuYlAFEAYe/TMYBDIjq4Ejszh5h51TCMTSHENoAugK4QYtswjE1mXmXm0FUIEslkcgvALwC7ACxv7QL4nUwmt5g5EYQhAsA10zTv9Xq9DQD9GSlHvV5vwzTND8y8T0Qns3CC7IVrtdoDADYA6bPsWq12f6I28zsAoDqOowI4CciB4zgaAHURgrDrukueUt+QUmoAlEUImJlxGUEoFAq8RUGbTrFY/AL/85cApGmaXwE4fiC+jcbMNBwOH8Visee2bUdm5USjUWcwGLwWQrSIiP/LARGxEOJ7uVz+6Ke+VCp9EkJ0/cADHXgubgBY03V9vdVq3ZrcS6VSfcuy3gshGkR0tkgN4P34LR6P/5xWr+t6RwjRDgIHgjuZMB5wUcuyzoEvotFouAAizHxMREdzE3jDaxnAciaTedhsNp9JKVUAe5N5nU5nPRwOP8nlcm+ZeQfAgIgOA2vAzCu2bcfS6fTjdrv9dDgcRjAedPs+AmMAbmuatpfNZt/V6/XPHtHBPwTMvJLP59eq1eqL0Wh05imed97HAdxRFOVPoVB4U6lUdohoME1wV1XVl6enpwMA7pzA06eRUBRFk1K+IqIf0zVwpZQNADcXAD+PPsZdfSFwugZzPaGXWglovOsXfwHCBwExv0uyNwAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxMS0xMS0xNFQxNDowMDowMiswMTowMP7W+nkAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTEtMTEtMTRUMTQ6MDA6MDIrMDE6MDCPi0LFAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAABJRU5ErkJggg==) top right no-repeat;
+
+    text-align: right;
+    cursor: pointer;
+}
+
+#panel div#user span {
+    color: #4e4e4e;
+    display: block;
+    padding: 4px 30px 0 0;
+    font-size: 13px;
+    font-family: Arial;
+}
+
+#panel div#user:hover span, #panel div#user.active span {
+    font-weight: bold;
+}
+
+#panel div#user ul {
+    display: none;
+    clear: both;
+    list-style-type: none;
+
+    margin-top: 20px;
+    min-width: 185px;
+    margin-right: 1px;
+    background: #dfdfdfdd;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    text-align: left;
+}
+
+#panel div#user > ul a {
+    color: #040404;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 13px;
+    font-family: Arial;
+    display: block;
+    min-height: 12px;
+    padding-top: 7px;
+    width: 100%;
+    vertical-align: middle;
+}
+
+#panel div#user > ul li {
+    margin-top: 7px;
+    border-top: 1px solid rgba(2, 0, 0, 0.2);
+    clear: both;
+    min-width: 145px;
+}
+
+#panel div#user > ul li:first-child {
+    margin-top: 0; border-top: 0;
+}
+
+#panel div#user.active a:hover {
+    text-shadow: 1px 1px 1px rgba(100, 100, 100, 1);
+}
+
+#panel div#user.active ul {
+    display: block;
+    position: absolute;
+    top: 1px;
+    padding: 10px 5px 10px 10px;
+    left: -66px;
+}
+
