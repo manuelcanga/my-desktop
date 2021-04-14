@@ -1,48 +1,38 @@
-# My Desktop - Manage your site from a web desktop
-
-Contributors: Manuel Canga
-
+=== My Desktop - Manage your site from a web desktop ===
+Contributors: trasweb
 Tags: admin, manage, desktop, tasks, windows, issues, icon, widgets, multitasking
-
 Requires at least: 4.9.0
-
 Tested up to: 5.7
-
 Requires PHP: 7.2
-
 Stable tag: 1.0
-
 License: GPLv3 or later
-
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
-
-## Summary
 
 Manage your site from a web desktop. Do multitasking with  windows, click icons, use notes. Jump to any place in your wp-admin quickly.
 
-## Description
+== Description ==
 
 Manage your site from a web desktop. Do multitasking with  windows, click icons, use notes. Jump to any place in your wp-admin quickly.
 
 The system users will interact with My Desktop very much the same way they would interact with a regular desktop operating system,
 but they work will be editing editing posts or approving comments.
 
-## Thanks
+== Thanks ==
 
 * [Javier Carazo](https://profiles.wordpress.org/carazo/) for testing this plugin.
 
-## Send me bugs or improvements
+== Send me bugs or improvements ==
 
 If you’re interested in contributing to My Desktop, head to the [My Desktop GitHub Repository](https://github.com/manuelcanga/my-desktop/).
 
-## Screenshots
+== Screenshots ==
 
-1. My Desktop is a new way of managing your site. <a href="assets/screenshot-1.png" target="_blank">See</a>
-2. Jump to any place in your wp-admin quickly. <a href="assets/screenshot-2.png" target="_blank">See</a>
-3. Customize place of icons, widgets and windows. <a href="assets/screenshot-3.png" target="_blank">See</a>
-4. Create new posts on full screen. <a href="assets/screenshot-4.png" target="_blank">See</a>
+1. My Desktop is a new way of managing your site.
+2. Jump to any place in your wp-admin quickly.
+3. Customize place of icons, widgets and windows.
+4. Create new posts on full screen.
 
-## Installation
+== Installation ==
 
 1. Login to the /wp-admin/ of your WP website.
 1. Go to the *Plugins* section.
@@ -52,15 +42,15 @@ If you’re interested in contributing to My Desktop, head to the [My Desktop Gi
 1. Click the *Activate Plugin* button.
 1. Finally, click the **Switch to your desktop** link.
 
-## Changelog
+== Changelog ==
 More detailed changes in [My Desktop GitHub Repository](https://github.com/manuelcanga/my-desktop/).
 
-#### 1.0 / 2021-04-15
+= 1.0 / 2021-04-15 =
 
 * Initial release.
 
-## Upgrade Notice
+== Upgrade Notice ==
 
-#### 1.0
+= 1.0 =
 
 First version. Install it
