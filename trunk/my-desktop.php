@@ -6,7 +6,7 @@ declare( strict_types = 1 );
  * Plugin Name: My Desktop
  * Plugin URI: https://github.com/manuelcanga/my-desktop
  * Description: Manage your site from a web desktop. Do multitasking with  windows, click icons, use notes or jump to any place in your wp-admin quickly. Only switch to wp-admin/my-desktop.
- * Version: 1.0
+ * Version: 1.1
  * Author: Manuel Canga
  * Author URI: https://manuelcanga.dev
  * License: GPL3
