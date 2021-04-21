@@ -65,6 +65,7 @@
     padding: 0;
     margin: 0;
     filter: brightness(52.2%) contrast(5.9%);
+    background-size: contain;
 }
 
 /**
