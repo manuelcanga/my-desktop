@@ -20,6 +20,7 @@ but they work will be editing editing posts or approving comments.
 == Thanks ==
 
 * [Javier Carazo](https://profiles.wordpress.org/carazo/) for testing this plugin.
+* Monty for his [review](https://diariodeunfriki.com/convierte-tu-wordpress-en-un-desktop-con-my-desktop-plugin/) of this plugin.
 
 == Send me bugs or improvements ==
 
