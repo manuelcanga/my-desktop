@@ -422,6 +422,7 @@ jQuery.Window = (function () {
         var miniStackIndex = -1;          // the index of window in minimized stack
         var animating = false;            // a boolean flag to indicate the window is doing animate
         var textPanelWidthOffset = 0;     // the width offset that title text panel should decrease
+        var defaultTitle = '';           // title from webtop.
 
         // element
         var container = null;             // whole window container element
@@ -569,6 +570,7 @@ jQuery.Window = (function () {
                 "</div>";
             container.append(headerHtml);
             header = container.children("div.window_header");
+            this.defaultTitle = options.title;
             hideIcon();
 
             // bind double click event with doing maximize action
@@ -670,16 +672,20 @@ jQuery.Window = (function () {
 
                 // iframe load finished call back
                 frame.ready(function () {
-                     frame.show();
+                    frame.show();
                 });
 
-                jQuery( frame ).on( 'load', function () {
+                jQuery(frame).on('load', function () {
                     redirectCheck = false;
                     loading.remove();
                     setFooterContent("");
                     log("load iframe finished: " + options.url);
                     if (jQuery.isFunction(options.onIframeEnd)) {
                         options.onIframeEnd(_this, options.url);
+                    }
+
+                    if (jQuery.isFunction(this.contentWindow.setKonquerorWindow)) {
+                        this.contentWindow.setKonquerorWindow(_this, this);
                     }
                 });
             } else {
@@ -892,9 +898,15 @@ jQuery.Window = (function () {
             }
         }
 
+        //set default title
+        function restoreTitle() {
+            this.setTitle(this.defaultTitle);
+        }
+
         // set window title
         function setTitle(title) {
             options.title = title;
+
             header.children(".window_title_text").text(title);
             if (minimized) {
                 _transformTitleText();
@@ -1607,6 +1619,7 @@ jQuery.Window = (function () {
             close: close,                                 // close current window. parameter: quiet - [boolean] to decide doing callback or not
             hide: hide,                                   // hide current window.
             show: show,                                   // show current window.
+            restoreTitle: restoreTitle,                   // change window title to default title from webtop.
             setTitle: setTitle,                           // change window title. parameter: title - [string] window title text
             setUrl: setUrl,                               // change iframe url. parameter: url - [string] iframe url
             setContent: setContent,                       // change frame content. parameter: content - [html string, jquery object, element] the content of frame

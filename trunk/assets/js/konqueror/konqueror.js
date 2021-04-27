@@ -1,3 +1,13 @@
+function setKonquerorWindow(window, iframe) {
+    var event = new CustomEvent('KonquerorIframeLoaded', {
+        detail: {
+            window: window,
+            iframe: iframe
+        }
+    });
+    document.dispatchEvent(event);
+}
+
 (function () {
     var konqueror_url = '<?= $konqueror_url ?>';
     var active_menu = '<?= $active_menu ?>';
@@ -35,6 +45,8 @@
         }
 
         konqueror_menu.classList.add('active');
+
+        set_new_title('');
     };
 
     get_dashboard_links = function () {
@@ -164,8 +176,34 @@
 
 
         konqueror_menu.classList.add('active');
+
+        set_new_title(page_title);
     }
 
+    /**
+     * Set new title for current window.
+     *
+     * @param new_title
+     */
+    set_new_title = function (new_title) {
+        document.addEventListener('KonquerorIframeLoaded', function (event) {
+            var window = event.detail.window;
+
+            window.restoreTitle();
+
+            if('' === new_title ){
+                return ;
+            }
+
+            var base_title = window.getTitle();
+
+            window.setTitle(new_title + " - " + base_title);
+        });
+    }
+
+    /**
+     * Start with konqueror.
+     */
     document.addEventListener('DOMContentLoaded', function () {
         if ('' === active_menu) {
             return redirect_main_links_to_konqueror();
