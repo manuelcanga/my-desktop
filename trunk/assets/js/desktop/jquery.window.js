@@ -594,8 +594,8 @@ jQuery.Window = (function () {
 
             // add maximize button
             if (options.maximizable) {
-                headerFuncPanel.append("<div title='maximize window' class='maximizeImg window_icon_button no-draggable'></div>");
-                headerFuncPanel.append("<div title='cascade window' class='cascadeImg window_icon_button no-draggable' style='display:none;'></div>");
+                headerFuncPanel.append("<div title='Maximize window' class='maximizeImg window_icon_button no-draggable'></div>");
+                headerFuncPanel.append("<div title='Cascade window' class='cascadeImg window_icon_button no-draggable' style='display:none;'></div>");
                 headerFuncPanel.children(".maximizeImg").click(function () {
                     maximize();
                 });
@@ -607,14 +607,14 @@ jQuery.Window = (function () {
 
             // add minimize button
             if (options.minimizable) {
-                headerFuncPanel.append("<div title='minimize window' class='minimizeImg window_icon_button no-draggable'></div>");
+                headerFuncPanel.append("<div title='Minimize window' class='minimizeImg window_icon_button no-draggable'></div>");
                 headerFuncPanel.children(".minimizeImg").click(function () {
                     minimize();
                 });
                 funcBarWidth += ICON_OFFSET;
             }
 
-            headerFuncPanel.append("<div title='back window' class='backImg window_icon_button no-draggable'></div>");
+            headerFuncPanel.append("<div title='Restore window' class='backImg window_icon_button no-draggable'></div>");
             headerFuncPanel.children(".backImg").click(function () {
                 setUrl(options.url);
             });
