@@ -23,7 +23,7 @@ final class Autoload {
      * @param string $base_namespace Base namespace of your application.
      * @param string $base_dir       Base directory of your application classes.
      */
-    final private function __construct( string $base_namespace, string $base_dir )
+    private function __construct( string $base_namespace, string $base_dir )
     {
         $this->base_namespace = $base_namespace;
         $this->base_dir = $base_dir;
@@ -72,7 +72,7 @@ final class Autoload {
      *
      * @return string
      */
-    final private function class_namespace_to_class_name( string $class_fqn ): string
+    private function class_namespace_to_class_name( string $class_fqn ): string
     {
         // Cut from the last '\'.
         return trim( strrchr( $class_fqn, '\\' ), '\\' );
@@ -87,7 +87,7 @@ final class Autoload {
      *
      * @return string
      */
-    final private function class_name_to_file_name( string $class_name ): string
+    private function class_name_to_file_name( string $class_name ): string
     {
         // Wpo_Checker => wpo-checker.
         $snake_case_name = strtolower( str_replace( '_', '-', $class_name ) );
@@ -106,7 +106,7 @@ final class Autoload {
      *
      * @return string
      */
-    final private function class_path_from_file( string $class_fqn, string $file_name ): string
+    private function class_path_from_file( string $class_fqn, string $file_name ): string
     {
         // \Trasweb\Plugins\Entities\Site  ==>  \Trasweb\Plugins\Entities
         $namespace_path = substr( $class_fqn, 0, -strlen( $file_name ) );

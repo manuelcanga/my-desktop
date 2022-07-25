@@ -73,7 +73,7 @@ class View {
 	 *
 	 * @return string
 	 */
-	final private function get_view_content( string $view_name ): string
+	private function get_view_content( string $view_name ): string
 	{
 		static $views_content_cache = [];
 

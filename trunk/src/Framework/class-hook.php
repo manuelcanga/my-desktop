@@ -129,7 +129,7 @@ class Hook {
      *
      * @return mixed
      */
-    final private function invoke_hook( $class, string $method, array $method_args = [], array $config = [], ?array $settings = null )
+    private function invoke_hook( $class, string $method, array $method_args = [], array $config = [], ?array $settings = null )
     {
         $object = is_object( $class ) ? $class : new $class();
 

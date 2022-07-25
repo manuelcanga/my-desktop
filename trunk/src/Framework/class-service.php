@@ -104,7 +104,7 @@ class Service {
      *
      * @return ?object
      */
-    final private function get_instance( array $args ): ?object
+    private function get_instance( array $args ): ?object
     {
         if ( $this->only_once && $this->instance ) {
             return $this->instance;

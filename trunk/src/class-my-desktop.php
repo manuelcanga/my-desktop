@@ -112,7 +112,7 @@ class My_Desktop {
 	 *
 	 * @return void
 	 */
-	final private function register_services(): void
+	private function register_services(): void
 	{
 		/*
 		 * @var Service[] $service_list
@@ -129,11 +129,11 @@ class My_Desktop {
 	 *
 	 * @return void
 	 */
-	final private function register_autoload(): void
+	private function register_autoload(): void
 	{
 		$autoload = Service::get( 'Autoload' );
 
-		spl_autoload_register( [ $autoload, 'find_class' ], $throw_exception = false );
+		spl_autoload_register( [ $autoload, 'find_class' ] );
 	}
 
 	/**
@@ -141,7 +141,7 @@ class My_Desktop {
 	 *
 	 * @return void
 	 */
-	final private function set_environment(): void
+	private function set_environment(): void
 	{
 		$environment = Service::get( 'Token' );
 
@@ -156,7 +156,7 @@ class My_Desktop {
 	 *
 	 * @return void
 	 */
-	final private function check_user_is_allowed(): void
+	private function check_user_is_allowed(): void
 	{
 		if ( !Service::get( 'User' )->is_allowed() ) {
 			$this->task_list = [];
@@ -168,7 +168,7 @@ class My_Desktop {
 	 *
 	 * @return void
 	 */
-	final private function load(): void
+	private function load(): void
 	{
 		WP_Hooks::do_action( PLUGIN_NAME . '-loaded' );
 	}
@@ -178,7 +178,7 @@ class My_Desktop {
 	 *
 	 * @return void
 	 */
-	final private function add_i18n(): void
+	private function add_i18n(): void
 	{
 		load_plugin_textdomain( PLUGIN_NAME, false, PLUGIN_NAME . self::LANG_DIR );
 	}
@@ -188,7 +188,7 @@ class My_Desktop {
 	 *
 	 * @return void
 	 */
-	final private function enqueue_hooks(): void
+	private function enqueue_hooks(): void
 	{
 		/*
 		 * @var Hook[] $hooks_list
@@ -205,7 +205,7 @@ class My_Desktop {
 	 *
 	 * @return void
 	 */
-	final private function enqueue_requests(): void
+	private function enqueue_requests(): void
 	{
 		/*
 		 * @var Hook[] $request_list
