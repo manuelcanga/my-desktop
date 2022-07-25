@@ -2,9 +2,9 @@
 Contributors: trasweb
 Tags: admin, manage, desktop, tasks, windows, issues, icon, widgets, multitasking
 Requires at least: 4.9.0
-Tested up to: 5.7
+Tested up to: 6.0.1
 Requires PHP: 7.2
-Stable tag: 1.1
+Stable tag: 1.2
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -45,6 +45,11 @@ If you’re interested in contributing to My Desktop, head to the [My Desktop Gi
 
 == Changelog ==
 More detailed changes in [My Desktop GitHub Repository](https://github.com/manuelcanga/my-desktop/).
+
+= 1.2 / 2022-07-25 =
+
+* Fix warning with last PHP versions.
+* Test with WP 6.0.1 version.
 
 = 1.0 / 2021-04-15 =
 
